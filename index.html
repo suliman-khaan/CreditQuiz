@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Credit Quiz</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-8 bg-light shadow-sm">
+                <div class="quiz-container text-center pt-3 pb-4 px-4">
+                    <h5 class="question">Question <span id="q-no">1/5</span></h5>
+                    <div class="d-flex justify-content-center mb-5 mt-2">
+                        <div class="progress w-75 rounded-0 justify-self-center" style="height: 10px;">
+                            <div class="progress-bar bg-green rounded-0" role="progressbar" style="width:25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <h4 id="question" style="font-weight: 600;">What does your typical payday look like?</h4>
+                    </div>
+                    <div class="answer py-4">
+                        <!-- List of Option goes here -->
+                    </div>
+                    <button type="submit" class="btn btn-success px-5" onclick="next()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
