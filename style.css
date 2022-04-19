@@ -19,3 +19,8 @@
 .active{
     background-color: #0B7A75!important;
 }
+@media screen and (max-width:767px) {
+    .progress{
+        width: 100%!important;
+    }
+}
