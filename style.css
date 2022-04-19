@@ -1,7 +1,7 @@
 .bg-green{
     background-color: #0B7A75!important;
 }
-.quiz-container{
+.quiz-container,#result{
     font-family: 'Poppins',sans-serif;
 }
 .answer ul li{
@@ -15,6 +15,24 @@
 }
 .answer ul li:hover{
     background-color: rgba(0,0,0,.01 );
+}
+#result{
+    display: none;
+
+}
+.result{
+ padding-left: 120px!important;
+ padding-right: 120px!important;
+}
+@media screen and (max-width:1024px) {
+    .result{
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+}
+
+#error{
+    display: none;
 }
 .active{
     background-color: #0B7A75!important;

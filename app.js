@@ -46,6 +46,9 @@ let questions =[
 ]
 
 //varaibles
+let quizContainer = document.querySelector("#quiz")
+let resultContainer = document.querySelector("#result")
+let error = document.querySelector("#error")
 let answer = document.querySelector('.answer')
 let q = document.querySelector("#question")
 let questionNumber = document.querySelector("#q-no")
@@ -56,6 +59,7 @@ var qNo = 1;
 var count= 0;
 var lengthOfQ = questions.length;
 var perQwidth = (100/lengthOfQ);
+var points =0; //store user points
 
 
 
@@ -90,10 +94,23 @@ var progress = () =>{
     progressBar.style.width= `${perQwidth*qNo}%`
     
 }
+
 //next function
 var next = ()=>{
+    let ans = document.querySelector(".answer ul li.active")
+    if(!ans){
+        error.style.display = "block"
+    }else{
+        error.style.display= 'none'
+    }
+
+    points += ans.value
+    console.log(points)
     if(qNo==lengthOfQ){
-        return false;
+        result(points)
+        quizContainer.style.display = 'none'
+        resultContainer.style.display = 'flex'
+        return ;
     }
     count++
     qNo++;
@@ -115,3 +132,7 @@ var show = (count=0)=>{
         `
     toggleActive()
 }
+
+var result = (points)=>{
+    console.log("YOur Results: ",points)
+    }
