@@ -17,8 +17,8 @@
     background-color: rgba(0,0,0,.01 );
 }
 #result{
+    /* opacity: 0; */
     display: none;
-
 }
 .result{
  padding-left: 120px!important;
